@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="subtitle m-b-md">
-                    Hello, <?= $name; ?>
+                    Hello, {{ $name }}
                 </div>
 
                 <div class="links">
