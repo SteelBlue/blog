@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome', compact('name', 'tasks'));
 });
 
+Route::get('/tasks/{task}', function ($id) {
+	dd($id);
+	$name = 'Ryan';
+	$tasks = DB::table('tasks')->get();
+
+    return view('welcome', compact('name', 'tasks'));
+});
+
 Route::get('/about', function() {
 	return view('about');
 });
