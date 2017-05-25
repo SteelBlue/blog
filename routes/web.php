@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function () {
-	$tasks = DB::table('tasks')->get();
+	$tasks = App\Task::all();
 
     return view('tasks.index', compact('tasks'));
 });
