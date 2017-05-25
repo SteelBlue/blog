@@ -93,9 +93,9 @@
                 <div class="links">
                     <span>To Do List:</span>
                     <ul>
-                    <?php foreach($tasks as $task) : ?>
-                        <li><?= $task; ?></li>
-                    <?php endforeach; ?>
+                        <?php foreach($tasks as $task) : ?>
+                            <li><?= $task; ?></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
