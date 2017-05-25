@@ -19,11 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks/{task}', function ($id) {
-	dd($id);
-	$name = 'Ryan';
-	$tasks = DB::table('tasks')->get();
+	$task = DB::table('tasks')->find($id);
 
-    return view('welcome', compact('name', 'tasks'));
+    return view('tasks.show', compact('task'));
 });
 
 Route::get('/about', function() {
