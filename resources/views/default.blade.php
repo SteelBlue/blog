@@ -53,7 +53,7 @@
                 font-size: 36px;
             }
 
-            .links {
+            .links > a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 12px;
@@ -86,17 +86,12 @@
                     Laracasts
                 </div>
 
-                <div class="subtitle m-b-md">
-                    Hello, <?= $name; ?>
-                </div>
-
                 <div class="links">
-                    <span>To Do List:</span>
-                    <ul>
-                    <?php foreach($tasks as $task) : ?>
-                        <li><?= $task; ?></li>
-                    <?php endforeach; ?>
-                    </ul>
+                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>
