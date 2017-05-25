@@ -60,7 +60,7 @@
                 letter-spacing: .1rem;
             }
 
-            .links > a, .tasks > a {
+            .links > a, .tasks li > a {
                 color: #636b6f;
                 padding: 0 25px;
                 text-decoration: none;
@@ -72,6 +72,7 @@
             }
 
             .tasks li {
+                margin-bottom: 10px;
                 list-style-type: none;
             }
 
