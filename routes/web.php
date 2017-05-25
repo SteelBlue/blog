@@ -22,7 +22,7 @@ Route::get('/tasks', function () {
 });
 
 Route::get('/tasks/{task}', function ($id) {
-	$task = DB::table('tasks')->find($id);
+	$task = App\Task::find($id);
 
     return view('tasks.show', compact('task'));
 });
