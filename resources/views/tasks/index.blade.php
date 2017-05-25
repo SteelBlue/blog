@@ -94,13 +94,25 @@
             @endif
 
             <div class="content">
+                <div class="links">
+                    <a href="{{ url('/') }}">Home</a>
+                    <a href="{{ url('/tasks') }}">Tasks</a>
+                </div>
+
                 <div class="title m-b-md">
                     Laracasts
                 </div>
 
-                <div class="links">
-                    <a href="{{ url('/') }}">Home</a>
-                    <a href="{{ url('/tasks') }}">Tasks</a>
+                <div class="subtitle m-b-md">
+                    Your Tasks:
+                </div>
+
+                <div class="tasks">
+                    <ul>
+                        @foreach ($tasks as $task)
+                            <li>{{ $task->body }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

@@ -12,10 +12,13 @@
 */
 
 Route::get('/', function () {
-	$name = 'Ryan';
+    return view('welcome', compact('name'));
+});
+
+Route::get('/tasks', function () {
 	$tasks = DB::table('tasks')->get();
 
-    return view('welcome', compact('name', 'tasks'));
+    return view('tasks.index', compact('tasks'));
 });
 
 Route::get('/tasks/{task}', function ($id) {

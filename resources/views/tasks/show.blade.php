@@ -53,14 +53,26 @@
                 font-size: 36px;
             }
 
-            .links {
+            .links, .tasks {
                 color: #636b6f;
-                padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
+            }
+
+            .links > a, .tasks > a {
+                color: #636b6f;
+                padding: 0 25px;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+
+            .tasks ul {
+                padding: 0;
+            }
+
+            .tasks li {
+                list-style-type: none;
             }
 
             .m-b-md {
@@ -82,6 +94,11 @@
             @endif
 
             <div class="content">
+                <div class="links">
+                    <a href="{{ url('/') }}">Home</a>
+                    <a href="{{ url('/tasks') }}">Tasks</a>
+                </div>
+
                 <div class="title m-b-md">
                     Laracasts
                 </div>
@@ -90,7 +107,7 @@
                     Current Task:
                 </div>
 
-                <div class="links">
+                <div class="tasks">
                     <span>{{ $task->body }}</span>
                 </div>
             </div>
