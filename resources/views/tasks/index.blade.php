@@ -60,7 +60,7 @@
                 letter-spacing: .1rem;
             }
 
-            .links > a, .tasks > a {
+            .links > a, .tasks li > a {
                 color: #636b6f;
                 padding: 0 25px;
                 text-decoration: none;
@@ -72,6 +72,7 @@
             }
 
             .tasks li {
+                margin-bottom: 10px;
                 list-style-type: none;
             }
 
@@ -110,7 +111,9 @@
                 <div class="tasks">
                     <ul>
                         @foreach ($tasks as $task)
-                            <li>{{ $task->body }}</li>
+                            <li>
+                                <a href="/tasks/{{ $task->id }}">{{ $task->body }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
