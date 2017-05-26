@@ -7,6 +7,19 @@
 
 		<hr>
 
+		<!-- Form Errors -->
+		@if (count($errors))
+			<div class="alert alert-danger">
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
+		<!-- END Form Errors -->
+
+		<!-- Post creation form -->
 		<form method="POST" action="/posts">
 			{{ csrf_field() }}
 
@@ -20,7 +33,9 @@
 				<textarea id="body" class="form-control" name="body"></textarea>
 			</div>
 			
-			<button type="submit" class="btn btn-default">Publish</button>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default">Publish</button>
+			</div>
 		</form>
 		<!-- END Post creation form -->
 
