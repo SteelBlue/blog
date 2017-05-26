@@ -34,7 +34,7 @@
         <!-- Add a Comment -->
         <div class="card">
             <div class="card-block">
-                <form>
+                <form method="POST" action="/posts/{{ $post->id }}/comments">
                     <div class="form-group">
                         <textarea class="form-control" name="body" placeholder="Your comment here..."></textarea>
                     </div>
