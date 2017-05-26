@@ -7,8 +7,8 @@
 
 		<hr>
 
-		<!-- Form Errors -->
 		@if (count($errors))
+			<!-- Form Errors -->
 			<div class="alert alert-danger">
 				<ul>
 					@foreach ($errors->all() as $error)
@@ -16,8 +16,8 @@
 					@endforeach
 				</ul>
 			</div>
+			<!-- END Form Errors -->
 		@endif
-		<!-- END Form Errors -->
 
 		<!-- Post creation form -->
 		<form method="POST" action="/posts">
