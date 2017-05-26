@@ -34,9 +34,11 @@
         <!-- Add a Comment -->
         <div class="card">
             <div class="card-block">
+                @include ('layouts.partials.errors')
+                
                 <form method="POST" action="/posts/{{ $post->id }}/comments">
                     {{ csrf_field() }}
-                    
+
                     <div class="form-group">
                         <textarea class="form-control" name="body" placeholder="Your comment here..."></textarea>
                     </div>
