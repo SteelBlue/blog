@@ -2,7 +2,9 @@
 
 @section ('content')
     <div class="col-sm-8 blog-main">
-        @include ('posts.partials.post')
+        @foreach ($posts as $post)
+            @include ('posts.partials.post')
+        @endforeach
 
         <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
