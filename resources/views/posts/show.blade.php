@@ -9,6 +9,22 @@
             {{ $post->body }}
         </div><!-- /.blog-post -->
 
+        <hr>
+
+        <div class="comments">
+            <h3>Comments</h3>
+
+            <ul class="list-group">
+                @foreach($post->comments as $comment)
+                    <li class="list-group-item">
+                        {{ $comment->body }}
+                        <br>
+                        <strong>{{ $comment->created_at->diffForHumans() }}</strong>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+
         <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
