@@ -24,7 +24,7 @@
 			</div>
 			
 			<div class="form-group">
-				<button type="submit" class="btn btn-default">Publish</button>
+				<button type="submit" class="btn btn-primary">Publish</button>
 			</div>
 		</form>
 		<!-- END Post creation form -->

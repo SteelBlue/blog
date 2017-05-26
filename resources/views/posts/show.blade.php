@@ -11,6 +11,7 @@
 
         <hr>
 
+        <!-- Comments -->
         <div class="comments">
             <h3>Comments</h3>
 
@@ -28,6 +29,23 @@
                 <p>Currently there are no comments. Be the first to comment!</p>
             @endif
         </div>
+        <!-- END Comments -->
+
+        <!-- Add a Comment -->
+        <div class="card">
+            <div class="card-block">
+                <form>
+                    <div class="form-group">
+                        <textarea class="form-control" name="body" placeholder="Your comment here..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Add Comment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END Add a Comment -->
 
         <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
