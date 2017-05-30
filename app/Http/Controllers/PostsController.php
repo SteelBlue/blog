@@ -11,7 +11,7 @@ class PostsController extends Controller
     {
         $this->middleware('auth')->except(['index', 'show']);
     }
-    
+
     public function index()
     {
         // Fetch all posts.
@@ -39,7 +39,12 @@ class PostsController extends Controller
         ]);
 
     	// Create a post using the request data.
-    	Post::create(request(['title', 'body']));
+    	// Post::create(request(['title', 'body']));
+        Post::create([
+            'title' => request('title'),
+            'body' => request('body'),
+            'user_id' => auth()->id()
+        ]);
 
     	// Redirect to the homepage.
     	return redirect('/');
