@@ -3,6 +3,10 @@
         <nav class="nav blog-nav">
             <a class="nav-link active" href="/">Home</a>
             <a class="nav-link" href="/posts/create">Create Post</a>
+
+            @if (auth()->check())
+            	<a class="nav-link ml-auto" href="#">{{ auth()->user()->name }}</a>
+            @endif
         </nav>
     </div>
 </div>
