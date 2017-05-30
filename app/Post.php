@@ -24,6 +24,14 @@ class Post extends Model
     	$this->comments()->create(compact('body'));
     }
 
+    public static function archives()
+    {
+        return static::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
+            ->get();
+    }
+
     public function scopeFilter($query, $filters)
     {
         if ($month = $filters['month']) {
