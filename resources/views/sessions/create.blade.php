@@ -4,6 +4,8 @@
 	<div class="col-md-8">
 		<h1>Sign In</h1>
 
+		@include ('layouts.partials.errors')
+
 		<form method="POST" action="/login">
 			{{ csrf_field() }}
 

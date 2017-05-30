@@ -8,7 +8,7 @@ class SessionsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest')->except(['destroy']);
     }
 
     public function create()
@@ -18,10 +18,13 @@ class SessionsController extends Controller
 
     public function store()
     {
+        // dd(request(['email', 'password']));
         // Attempt to authenticate the user.
         if (! auth()->attempt(request(['email', 'password']))) {
             // Not an authenticated user.
-            return back();
+            return back()->withErrors([
+                'message' => 'Please check your credentials and try again.'
+            ]);
         }
 
         // Redirect to the homepage.
