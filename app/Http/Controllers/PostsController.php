@@ -39,12 +39,9 @@ class PostsController extends Controller
         ]);
 
     	// Create a post using the request data.
-    	// Post::create(request(['title', 'body']));
-        Post::create([
-            'title' => request('title'),
-            'body' => request('body'),
-            'user_id' => auth()->id()
-        ]);
+        auth()->user()->publish(
+            new Post(request(['title', 'body']))
+        );
 
     	// Redirect to the homepage.
     	return redirect('/');
