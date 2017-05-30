@@ -8,6 +8,11 @@ class SessionsController extends Controller
 {
     public function create()
     {
-    	
+
+    }
+
+    public function destroy()
+    {
+    	auth()->logout();
     }
 }
