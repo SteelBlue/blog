@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -15,7 +16,9 @@ class PostsController extends Controller
     public function index()
     {
         // Fetch all posts.
-        $posts = Post::latest()->get();
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
 
         // Fetch archives.
         $archives = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
