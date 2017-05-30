@@ -4,6 +4,8 @@
 	<div class="col-sm-8">
 		<h1>Register Here</h1>
 
+		@include ('layouts.partials.errors')
+
 		<form method="POST" action="/register">
 			{{ csrf_field() }}
 
@@ -20,6 +22,11 @@
 			<div class="form-group">
 				<label for="password">Password:</label>
 				<input type="password" class="form-control" id="password" name="password">
+			</div>
+
+			<div class="form-group">
+				<label for="password_confirmation">Password Confirmation:</label>
+				<input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
 			</div>
 
 			<div class="form-group">
