@@ -17,7 +17,13 @@ class PostsController extends Controller
         // Fetch all posts.
         $posts = Post::latest()->get();
 
-    	return view('posts.index', compact('posts'));
+        // Fetch archives.
+        $archives = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
+            ->groupBy('year', 'month')
+            ->get()
+            ->toArray();
+
+    	return view('posts.index', compact('posts', 'archives'));
     }
 
     public function show(Post $post)
