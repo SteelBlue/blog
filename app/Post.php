@@ -31,7 +31,7 @@ class Post extends Model
         }
 
         if ($year = $filters['year']) {
-            $query->whereMonth('created_at', $year);
+            $query->whereYear('created_at', $year);
         }
     }
 }
