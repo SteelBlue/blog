@@ -10,7 +10,7 @@ class SessionsController extends Controller
     {
         $this->middleware('guest');
     }
-    
+
     public function create()
     {
         return view('sessions.create');
@@ -19,7 +19,7 @@ class SessionsController extends Controller
     public function store()
     {
         // Attempt to authenticate the user.
-        if (!auth()->attempt(request(['email', 'password']))) {
+        if (! auth()->attempt(request(['email', 'password']))) {
             // Not an authenticated user.
             return back();
         }
