@@ -7,12 +7,12 @@ The body of your message.
 - two
 - three
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => 'http://blog.dev'])
+Start Browsing
 @endcomponent
 
 @component ('mail::panel', ['url' => ''])
-	Lorem ipsum dolar sit amet.
+	This will be an inspiring quote...
 @endcomponent
 
 Thanks,<br>
