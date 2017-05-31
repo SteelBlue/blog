@@ -1,7 +1,7 @@
 @extends ('layouts.master')
 
 @section ('content')
-	<div class="col-md-8">
+	<div class="col-md-6 col-md-offset-3">
 		<h1>Sign In</h1>
 
 		@include ('layouts.partials.errors')

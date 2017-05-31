@@ -56,4 +56,6 @@
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
         </nav>
     </div>
+
+    @include ('layouts.sidebar')
 @endsection
