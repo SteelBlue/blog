@@ -29,7 +29,8 @@ class Post extends Model
         return static::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
-            ->get();
+            ->get()
+            ->toArray();
     }
 
     public function scopeFilter($query, $filters)
