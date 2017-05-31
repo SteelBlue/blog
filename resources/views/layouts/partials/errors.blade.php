@@ -1,6 +1,7 @@
 @if (count($errors))
 	<!-- Form Errors -->
 	<div class="alert alert-danger">
+		<h4>Ermish says you fucked up... Fix it!</h4>
 		<ul>
 			@foreach ($errors->all() as $error)
 				<li>{{ $error }}</li>
