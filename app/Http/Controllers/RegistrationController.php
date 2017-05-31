@@ -33,7 +33,7 @@ class RegistrationController extends Controller
     	auth()->login($user);
 
         // Send confirmation email to the user.
-        \Mail::to($user)->send(new RegistrationComplete);
+        \Mail::to($user)->send(new RegistrationComplete($user));
 
     	// Redirect to the homepage.
     	return redirect()->home();
