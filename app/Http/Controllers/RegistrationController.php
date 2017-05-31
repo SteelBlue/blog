@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Mail\RegistrationComplete;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
@@ -30,6 +31,9 @@ class RegistrationController extends Controller
 
     	// Sign them in.
     	auth()->login($user);
+
+        // Send confirmation email to the user.
+        \Mail::to($user)->send(new RegistrationComplete);
 
     	// Redirect to the homepage.
     	return redirect()->home();
