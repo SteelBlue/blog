@@ -11,6 +11,13 @@
 
         <hr>
 
+        <!-- Post Navigation -->
+        <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+        </nav>
+        <!--- END Post Navigation -->
+
         <!-- Comments -->
         <div class="comments">
             <h3>Comments</h3>
@@ -50,11 +57,6 @@
             </div>
         </div>
         <!-- END Add a Comment -->
-
-        <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-        </nav>
     </div>
 
     @include ('layouts.sidebar')
