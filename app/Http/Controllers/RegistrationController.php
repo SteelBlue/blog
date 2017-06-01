@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Mail\RegistrationComplete;
+use App\Mail\Welcome;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
@@ -33,7 +33,7 @@ class RegistrationController extends Controller
     	auth()->login($user);
 
         // Send confirmation email to the user.
-        \Mail::to($user)->send(new RegistrationComplete($user));
+        \Mail::to($user)->send(new Welcome($user));
 
     	// Redirect to the homepage.
     	return redirect()->home();
