@@ -182,6 +182,31 @@ h6, .h6 {
 }
 
 /*
+ * Buttons
+ */
+.btn-outline-primary {
+  color: #2a88bd;
+  border-color: #2a88bd;
+  transition: 350ms;
+
+  &:hover {
+    color: #fff;
+    background-color: #2a88bd;
+  }
+}
+.btn-outline-secondary {
+  color: #ccc;
+  background-color: none;
+  border-color: #ccc;
+  transition: 350ms;
+
+  &:hover {
+    color: #fff;
+    background-color: #ccc;
+  }
+}
+
+/*
  * Flash Messages
  */
 
