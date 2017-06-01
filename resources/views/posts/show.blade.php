@@ -11,6 +11,20 @@
 
         <hr>
 
+        @if (count($post->tags))
+            <!-- Post Tags -->
+            <ul>
+                @foreach ($post->tags as $tag)
+                <li>
+                    {{ $tag->name }}
+                </li>
+                @endforeach
+            </ul>
+            <!-- END Post Tags -->
+        @endif
+
+        <hr>
+
         <!-- Post Navigation -->
         <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
