@@ -7,7 +7,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>My ErmDizzle Application</title>
+        <title>My Laravel Application</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
         <div class="blog-header">
             <div class="container">
-                <h1 class="blog-title">The ErmDizzle Blog</h1>
+                <h1 class="blog-title">The Laravel Blog</h1>
                 <p class="lead blog-description">An example blog template built with Laravel and Bootstrap.</p>
             </div>
         </div>
