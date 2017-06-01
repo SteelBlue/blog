@@ -17,7 +17,9 @@ class PostsController extends Controller
     public function index(Post $posts)
     {
         // Fetch all posts.
-        $posts = $posts->all();
+        $posts = $posts->latest()
+            ->filter(request(['month', 'year']))
+            ->get();
 
     	return view('posts.index', compact('posts'));
     }
