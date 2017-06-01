@@ -47,6 +47,11 @@ class PostsController extends Controller
             new Post(request(['title', 'body']))
         );
 
+        // Display flash message, when post has been created.
+        session()->flash(
+            'message', 'Your post has now been published.'
+        );
+
     	// Redirect to the homepage.
     	return redirect('/');
     }

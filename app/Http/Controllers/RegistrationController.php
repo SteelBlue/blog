@@ -17,7 +17,9 @@ class RegistrationController extends Controller
         $form->persist();
 
         // Display flash message, once new user is created and logged in.
-        session()->flash('message', 'Thanks so much for signing up!');
+        session()->flash(
+            'message', 'Thanks so much for signing up!'
+        );
 
     	// Redirect to the homepage.
     	return redirect()->home();
