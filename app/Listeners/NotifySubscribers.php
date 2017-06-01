@@ -6,7 +6,7 @@ use App\Events\ThreadCreated;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class NotifySubscribers
+class NotifySubscribers implements ShouldQueue
 {
     /**
      * Create the event listener.
