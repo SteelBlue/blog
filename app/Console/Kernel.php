@@ -24,6 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('blog:clear-history')->monthly();
+        $schedule->command('blog:daily-report')->dailyAt('23:55');
         // $schedule->command('inspire')
         //          ->hourly();
     }
