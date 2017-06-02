@@ -6,7 +6,7 @@ use App\Events\UserWasBanned;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class EmailBanNotification
+class EmailBanNotification implements ShouldQueue
 {
     /**
      * Create the event listener.
