@@ -1,5 +1,7 @@
 <?php
 
+use App\Events\UserWasBanned;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +12,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/event/ban_user', function() {
+	$user = App\User::first();
+
+	event(new UserWasBanned($user));
+
+	return view('welcome');
+});
 
 Route::get('/', 'PostsController@index')->name('home');
 Route::get('/posts/create', 'PostsController@create');
